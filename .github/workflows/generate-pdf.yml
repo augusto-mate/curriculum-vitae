@@ -1,0 +1,43 @@
+name: Generate CV PDFs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:   # permite rodar manualmente
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Checkout do repositório
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+    # 2. Instalar Pandoc (conversor universal de Markdown → PDF)
+      - name: Install Pandoc
+        run: | 
+          sudo apt-get update 
+          sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+
+    # 3. Gerar PDFs a partir do README.md
+      - name: Generate Portuguese CV
+        run: |
+          mkdir -p docs
+          pandoc README-pt.md -o docs/cv_augusto-mate_pt.pdf
+
+      - name: Generate English CV
+        run: |
+          mkdir -p docs
+          pandoc README-en.md -o docs/resume_augusto-mate_en.pdf
+
+    # 4. Disponibilizar como artifacts para download na aba Actions
+      - name: Upload PDFs as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: curriculum-vitae-pt-en-pdfs
+          path: |
+            docs/cv_augusto-mate_pt.pdf
+            docs/resume_augusto-mate_en.pdf
+            
