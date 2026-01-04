@@ -7,14 +7,14 @@ Selecione o idioma / Select language:
 
 ## 📄 Downloads (PDF)
 
-- 🇵🇹 [CV em PDF (PT)](docs/cv_augusto-mate_pt.pdf)
-- 🇺🇸 [Resume in PDF (EN)](docs/resume_augusto-mate_en.pdf)
+- 🇵🇹 [CV em PDF (PT)](https://augusto-mate.github.io/curriculum-vitae/cv_augusto-mate_pt.pdf)
+- 🇺🇸 [Resume in PDF (EN)](https://augusto-mate.github.io/curriculum-vitae/resume_augusto-mate_en.pdf)
 
 ## 📜 License
 
-The content contained herein is intended solely for the purpose of displaying my resume.  
+This space contains my resume (PT/EN) for professional and presentation purposes. Content subject to copyright.  
 For details, refer to the [LICENSE.md](LICENSE.md) file.
 
 ---
 
-_Last updated: December 2025_
+_Last updated: January 2026_
